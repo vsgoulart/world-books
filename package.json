@@ -1,0 +1,56 @@
+{
+  "name": "world-books",
+  "version": "1.0.0",
+  "repository": "https://github.com/vsgoulart/world-books.git",
+  "author": "Vinícius Goulart (vinicius@nurture.be)",
+  "license": "MIT",
+  "scripts": {
+    "clean": "bnr clean",
+    "serve": "bnr serve",
+    "analyze": "bnr analyze"
+  },
+  "betterScripts": {
+    "clean": {
+      "command": "rimraf dist"
+    },
+    "serve": {
+      "command": "webpack-dev-server"
+    },
+    "analyze": {
+      "command": "bnr clean && webpack --env.prod --env.analyze -p",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  },
+  "dependencies": {
+    "better-npm-run": "^0.0.15",
+    "rimraf": "^2.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "glamor": "^3.0.0-2",
+    "glamorous": "^3.23.5",
+    "html-webpack-plugin": "^2.29.0",
+    "node-sass": "^4.5.3",
+    "normalize.css": "^7.0.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.1.0",
+    "webpack-bundle-analyzer": "^2.8.2",
+    "webpack-dev-server": "^2.5.1"
+  }
+}
